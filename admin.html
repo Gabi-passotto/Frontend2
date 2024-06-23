@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link rel="stylesheet" type= "text/css" href="admin.css">
+</head>
+<header>
+    <div id="titulo">
+            <h1>Onda Solidária</h1>  
+            <h2>Admin</h2>           
+    </div>
+    <div id="HeaderText">
+        <nav>
+            <a href="Login.html">Login</a>
+        </nav>
+    </div>
+    <br>
+    <hr style="width: 98%">
+</header>
+<body>
+    <div id="main">
+        <div id="container-admin">
+            <h2>Cadastro</h2>
+            <form id = "cadUser">
+                <label for="nome">Nome do Usuário:</label>
+                <input type="text" id="nome" placeholder="Digite seu nome" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="Digite seu email" required>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+        <div id = "Cadastros">
+            <div id="top">
+                <p>Data de Reg. - Nome - Email</p>
+                <div id="searchOptions">
+                    <label for="selectOptions">Critério de Pesquisa:</label>
+                    <select id="selectOptions">
+                        <option value="date">Data</option>
+                        <option value="name">Nome</option>
+                        <option value="email">email</option>
+                    </select>
+                    <input type="text" id="searchBox" placeholder="Search Field">
+                </div>
+            </div>
+            <br>
+            <ul id="allUsers"></ul>
+            <div id = "Functions">
+                <br><button type="clear" onclick="clearAllUsers()">Limpar</button>
+                <button type="search" id="search"onclick="searchUser()">Pesquisar </button>
+                <button type="refresh" onclick="renderUserList()">Recarregar</button>
+                <button type="clearField" onclick="document.getElementById('searchBox').value = ''">Limpar Pesquisa</button>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <hr style="width: 98%">
+        <br>
+        <h3>2024 | Onda Solidária | Todos os direitos reservados.</h3>
+    </footer>
+    <script src="admin.js"></script>
+</body>
+</html>
